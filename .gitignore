@@ -17,3 +17,4 @@ credentials
 # Système et éditeur
 .DS_Store
 .vscode/
+sandbox/
