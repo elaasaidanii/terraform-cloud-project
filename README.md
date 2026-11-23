@@ -16,7 +16,7 @@ Plateforme AWS haute disponibilité, déployée avec Terraform et pilotée par u
 | Niveau | Module | Statut |
 |---|---|---|
 | 0 | Setup | Terminé |
-| 1 | Backend S3 | À faire |
+| 1 | Backend S3 | Terminé (script AWS CLI) |
 | 2 | Network | À faire |
 | 3 | Security | À faire |
 | 4 | Load balancer | À faire |
