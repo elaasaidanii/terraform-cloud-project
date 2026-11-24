@@ -16,3 +16,10 @@
 | Checkov | Détecte les failles de sécurité dans le code | Pipeline |
 | Gitleaks | Empêche la fuite de secrets | Pipeline |
 | Infracost | Affiche le coût d'un changement | Pipeline |
+
+## Ajouts du Jour 3
+
+| Outil | Rôle |
+|---|---|
+| Bash (`scripts/bootstrap-backend.sh`) | Rend la création du backend rejouable et vérifiable |
+| `aws s3api` | Commandes S3 de bas niveau (création, versioning, chiffrement) |
