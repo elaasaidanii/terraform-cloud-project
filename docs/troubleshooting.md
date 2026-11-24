@@ -32,3 +32,9 @@
 - **Symptôme :** `locked provider registry.terraform.io/hashicorp/aws 6.73.0 does not match configured version constraint ~> 5.0`
 - **Cause :** `.terraform.lock.hcl` fixait une version après un test, puis j'ai changé la contrainte dans `main.tf`
 - **Solution :** aligner la contrainte et lancer `terraform init -upgrade`
+
+## AWS CLI : `aws s3 ls` n'affiche rien alors que le bucket existe
+- **Symptôme :** aucune ressource visible après une reconnexion au Learner Lab
+- **Cause :** les identifiants collés appartenaient à un autre compte AWS
+- **Diagnostic :** comparer les 4 derniers chiffres de `aws sts get-caller-identity --query Account --output text`
+- **Solution :** recoller les identifiants du bon compte
