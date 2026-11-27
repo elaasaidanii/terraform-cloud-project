@@ -17,3 +17,21 @@ module "network" {
   private_app_subnet_cidrs = ["10.20.11.0/24", "10.20.12.0/24"]
   private_db_subnet_cidrs  = ["10.20.21.0/24", "10.20.22.0/24"]
 }
+
+module "security" {
+  source = "../../modules/security"
+
+  project_name = var.project_name
+  environment  = var.environment
+  vpc_id       = module.network.vpc_id
+}
+
+module "load_balancer" {
+  source = "../../modules/load-balancer"
+
+  project_name      = var.project_name
+  environment       = var.environment
+  vpc_id            = module.network.vpc_id
+  public_subnet_ids = module.network.public_subnet_ids
+  security_group_id = module.security.alb_security_group_id
+}
