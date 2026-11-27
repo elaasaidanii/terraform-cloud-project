@@ -1,0 +1,7 @@
+# Copier ce fichier en terraform.tfvars et adapter les valeurs.
+# Ne jamais y mettre de secret.
+aws_region   = "us-east-1"
+environment  = "dev"
+project_name = "cloud5"
+owner        = "ton-prenom"
+vpc_cidr     = "10.20.0.0/16"
